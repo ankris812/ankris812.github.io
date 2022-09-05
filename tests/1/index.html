@@ -1,0 +1,370 @@
+<html>
+<head>
+    <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+    <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Meme Blog Engine</title>
+
+	<link href='https://fonts.googleapis.com/css?family=PT+Sans:400,700' rel='stylesheet' type='text/css'>
+	    
+	<link href='/css/reset.css' rel='stylesheet' type='text/css'>
+    
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/font-awesome/4.1.0/css/font-awesome.css">
+    <link rel="stylesheet" href="/css/style.css">
+    
+    <link rel="stylesheet" href="/css/dashboard.css">
+    
+    <link rel="stylesheet" href="/css/input.css">
+    <link rel="stylesheet" href="/css/login.css">
+     <link rel="stylesheet" href="/css/card.css">
+    <!--
+    
+    <link rel="stylesheet" href="node_modules/medium-editor/dist/css/medium-editor.css">
+    <link rel="stylesheet" href="node_modules/medium-editor/dist/css/themes/default.css" id="medium-editor-theme">
+	
+	
+	
+    !-->
+    
+    
+    
+    
+    <script type="text/javascript" charset="utf-8" src="/js/pageentry.js"></script>
+    <link href="/node_modules/alloyeditor/dist/alloy-editor/assets/alloy-editor-atlas-min.css" rel="stylesheet">
+     <script src="/node_modules/alloyeditor/dist/alloy-editor/alloy-editor-all-min.js"></script>
+    
+</head>
+<body>
+	
+	
+	
+    
+    <!-- Navbar from codyhouse -->
+    <header class = "header">
+		
+
+		<nav class="cd-main-nav-wrapper" id="nav">
+			<div class="cd-logo"><a href="/"><img onclick="return changePageToHome();"src="/images/logo2.png" alt="Logo"></a></div>
+			<ul id = "loge" class="cd-main-nav">
+
+				<li><a  id="pp" href="#popularposts">High Rated Blogs</a></li>
+				<li><a id="srh" href="#search">Search</a></li>
+				<li><a id="cp" href="#createpost">Write Blog Post</a></li>
+				<li><a id="ab"  href="#about">About</a></li>
+				<li><a id="log" href="#null">Login/Register</a></li>
+			
+				<li>
+					<a href="#null" class="cd-subnav-trigger"><span>Categories</span></a>
+
+					<ul>
+						<li class="go-back"><a href="#null">Menu</a></li>
+						<li><a id="com" href="#comedy">Comedy</a></li>
+						<li><a id="edu" href="#educational">Educational</a></li>
+						<li><a id="pol" href="#politics">Politics</a></li>
+						<li><a id="art"href="#literatureart">Literature/Art</a></li>
+						<li><a id="vg" href="#games">Video Games/Electronics</a></li>
+						<li><a href="#null" class="placeholder">Placeholder</a></li>
+					</ul>
+				</li>
+			
+			</ul> <!-- .cd-main-nav -->
+		</nav> <!-- .cd-main-nav-wrapper -->
+		
+		<a href="#null" class="cd-nav-trigger">Menu<span></span></a>
+	</header class="header">
+
+    <main class="main-container">
+    <div id ="container" class="cd-main-content">
+ 
+ 			
+    
+    </div>
+    
+    <div id ="popularposts" class="notVisible">
+    	<p>You are on page view popular Post PAGE cuzsssss ahahahahahh pewpw pepw pe pewp wppads dasfasfas fa afs afas</p>
+    </div>
+    
+    
+    <div id="dashboard" class="notVisible">
+ 		
+	    	
+	    	
+	    	
+
+        	
+        	<div class="row group">
+        	<div class="col col-2-12">
+        		
+        	</div>
+        	<div id="randomFeeds" class="col col-5-12">
+        	<div id="creatingStory" class="createStory" style="padding-top: 50px">
+        	<div class="card card--small" style="height:10%">
+	         
+	              <div style="background-image: url(https://secure.gravatar.com/avatar/db9ada061eb8e861c6efffaf29c1364f?d=retro); background-size: contain;" class="card__image"></div>
+	             <h2 class="card__title" id="myName">Loading Name...</h2><span id="myPosts"class="card__subtitle">Loading post....</span>
+	              <button id="linkProf"  onclick="return changePageToMyProfile('/profile');" class="btn myProf" style="background-color: red">My Profile</button>
+   
+ 
+    
+
+	              
+	        </div>
+	        
+
+        	</div>
+
+
+        	
+	    	<h1>Blog Featured Feeds</h1>
+	    	<div id="feed">
+	    
+        </div>
+        	</div>
+        	
+        	<div class="col col-3-12" id="tags"  style="padding-top: 50px">
+        		<div class="card card--medium ">
+	         
+	              <h2 class="card__title">Top Stories</h2>
+	              <ul class="card__text activeOverflow"">
+	              	<li>Story1</li>
+	              	<li>Story2</li>
+	              	<li>Story3</li>
+	              </ul>
+	              <div class="card__action-bar">
+	                <button class="card__button">SHARE</button>
+	                <button class="card__button">LEARN MORE</button>
+	          </div>
+	        </div>
+	        
+	        
+	        <div class="card card--medium activeOverflow">
+	        
+	              <ul id = "preferredtaggers" class="tags">
+	 					
+					</ul>
+	              
+	        </div>
+	        
+				<span class="input input--hoshi">
+					<input class="input__field input__field--hoshi" type="text" id="filterInput">
+					<label class="input__label input__label--hoshi input__label--hoshi-color-3" for="input-4">
+						<span class="input__label-content input__label-content--hoshi">Insert Tags to add to filter</span>
+					</label>
+	</span>
+	
+	<button class="btn" type="button" onclick="return getfilterTaggers();"><span>Add Tag to Filter By</span></button>
+	        
+        	</div>
+        	
+        	
+        	
+        	
+        </div>
+        
+        <div id="other stuff">
+           
+        </div>
+    </div>
+    
+    
+   
+	   <div id ="createpost" class="notVisible">
+   
+   <div class="contentEditing">
+    <div id="Title" class="editable" ><p>Enter a title here!</p></div>
+
+    <div id="Body" class="editable"><p>Change the body here</p></div>
+    
+		</div>
+  
+   	<br/>
+   	<br/>
+   	
+   	<ul id = "taggers" class="tags"style="margin: 0 auto; width:30%">
+	 
+	</ul>
+	
+   	<div class="alignCenterInput">
+   	
+   	<span class="input input--hoshi">
+					<input class="input__field input__field--hoshi" type="text" id="taginput">
+					<label class="input__label input__label--hoshi input__label--hoshi-color-1" for="input-4">
+						<span class="input__label-content input__label-content--hoshi">Insert Tags #'s</span>
+					</label>
+	</span>
+	
+	<button class="btn red" type="button" onclick="return getTags();"><span>Add Tag</span></button>
+	
+	</div>
+   		<button class="btn" type="button" onclick="return postContent();"><span>Publish</span></button>
+    <div id="successPost">
+        
+    </div>
+    </div>
+    
+    <div id ="comedy" class="notVisible">
+    	 <p>You are on <span id="pnum">Comedy cuz</span></p>
+    </div>
+    
+    <div id ="about" class="notVisible">
+        <div class="contentEditing">
+    	<div id="Title2"><h1>About page</h1></div>
+    	<div id="Body2"><p><code>This site is about creating you blog, its programmed in java script, html, and with some cs. The server runs on nodejs, and the SPA is just routing done through filling the inner html based on what the URL is at.&nbsp;</code></p><p><code><br></code></p><p><code>To get started you can create a account which takes like a second, then head over to write your own blog post, and then just write whatever you intend to write and give some tags related to that field. You can double click or highlight your text in the editor for options, or hit the + symbol that shows up for a different set of options. You can paste in images and gifs as well.</code></p><p><code><br></code></p><p><code>Posts have tags when you view them, a title, and a unique id. They belong to a user as well and can be liked as well. You can go to your profile page to edit your posts or even remove them. You can also view them there. Clicking on the categories button will pull up tags, the tags you click on will display a grid of posts with that tag. High rated blogs will hold the best liked blogs for that week.<br></code></p><p><br></p><p><code>Glhf&nbsp;</code></p> <br> <code><p>Made by Chris Czerwinski and Karan Kotwal</p></code></div>
+        </div>
+        <ul id="taggers" class="tags" style="padding-top: 40px !important; margin: 0 auto; width:30%"><li class="tag">#AboutPage</li><li class="tag">#gettingstarted</li></ul>
+    </div>
+    
+     <div id ="educational" class="notVisible">
+    	<p>You are on <span id="pnum">Educational page cuz</span></p>
+    </div>
+    
+     <div id ="games" class="notVisible">
+    	<p>You are on <span id="pnum">About page cuz</span></p>
+    </div>
+    
+     <div id ="literatureart" class="notVisible">
+    	<p>You are on <span id="pnum">Literature/Art page cuz</span></p>
+    </div>
+    
+     <div id ="login" class="notVisible">
+     
+    </div>
+    
+     <div id ="politics" class="notVisible">
+    	<p>You are on <span id="pnum">Politics page cuz</span></p>
+    </div>
+    
+     <div id ="register" class="notVisible">
+     	
+    </div>
+    
+     <div id ="search" class="notVisible">
+    	<p>You are on <span id="pnum">Search page cuz</span></p>
+    </div>
+    
+    <div id ="profile" class="notVisible">
+        <div id="myProfile">
+            <p>You are on profile page cuz</p>
+        </div>
+    </div>
+    
+    <div id ="innerPost" class="notVisible">
+        <div class = "contentEditing">
+             <h1>Loading Post..</h1>
+        </div>
+    </div>
+    
+    <div id="profileView" class="notVisible">
+            <div class="row group">
+                <h1 id = "myNameTitle"></h1>
+            	<div class="col col-2-12">
+            		
+            	</div>
+            	
+            	<div class="col col-5-12">
+            	    <div id="profileCards">
+            	        
+            	    </div>
+            	</div>
+            	
+            	<div class="col col-3-12">
+            	    <div id="favoritesPosts">
+            	        
+            	    </div>
+            	</div>
+            	
+        	</div>
+    </div>
+    
+    <div class="modal" id="myModal">
+    <div class="modal-content" id="modcontent">
+    
+    <div class="modal-body" id="modbody">
+      <div class="container" id="logincontainer">
+  <div class="cards"></div>
+  <div class="cards">
+    <h1 class="title">Login</h1>
+    <form>
+   
+      
+      <div class="input-container">
+        <input type="text"  required="required" id="login-email" autocomplete="off"/>
+        <label for="Username">Email Address</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+        <input type="password"  required="required" id="login-password" autocomplete="off"/>
+        <label for="Password">Password</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+		<div id = "login-status"></div>
+      </div>
+      <div class="button-container">
+        <button type="button" id="login-btn" onclick="return loginButton();"><span>Go</span></button>
+      </div>
+      <div class="footer"><a href="#">Forgot your password?</a>
+      <a href="#">Click on the pen to register?</a>
+      </div>
+    </form>
+  </div>
+  <div class="cards alt">
+    <div class="toggle" id="toggs" onclick="return showReg();"></div>
+    <h1 class="title">Register
+      <div class="close" id="closer" onclick="return showLogin();"></div>
+    </h1>
+    <form>
+    	<div class="input-container">
+        <input type="text" id="name" required="required" id="name" autocomplete="off"/>
+        <label for="Username">Full Name</label>
+        <div class="bar"></div>
+      </div>
+      
+      <div class="input-container">
+        <input type="text" id="email" required="required"/>
+        <label for="Username">Email Address</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+        <input type="password" id="password" required="required"/>
+        <label for="Password">Password</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+        <input type="password" id="repeat-password" required="required"/>
+        <label for="Repeat Password">Repeat Password</label>
+        <div class="bar"></div>
+      </div>
+      <div class="input-container">
+		<div id = "reg-status"></div>
+      </div>
+      <div class="button-container">
+        <button onclick="return registerButton();" id="reg-btn"><span>Submit</span></button>
+      </div>
+      
+    </form>
+  </div>
+</div>
+    </div>
+    </div>
+    
+  </div>
+    
+    </main>
+
+    <!-- Include js files here! --> 
+       <!-- <script src="node_modules/medium-editor/dist/js/medium-editor.min.js"></script> -->
+
+
+   
+    <script type="text/javascript" src="https://cdn.firebase.com/js/client/2.2.3/firebase.js"></script>	
+    <script src="/js/render.js"></script>
+    <script src="/js/mobilenavbar.js"></script>
+    <script src="/js/db.js"></script>
+    <script src="/js/rippleEffect.js"></script>
+    <script src="/js/classie.js"></script>
+    <script src="/js/crud.js"></script>
+    
+
+</body>
+</html>
